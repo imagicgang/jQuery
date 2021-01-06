@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <a href="https://www.google.com/"></a>
+    <br/>
+    <a href="https://www.youtube.com/" id="yt"></a>
+    <br/>
+    <a href="https://www.facebook.com/" class="fb"></a>
+    <script src="../jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("a").text("Google!!!").css('font-size', '3em');
+
+            $("#yt").text("Youtube...").css('font-size', '25px');
+
+            $(".fb").text("FACEBOOK").css('color', 'red').css('font-weight', 'bold');
+
+        });
+    </script>
+</body>
+</html>
