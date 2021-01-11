@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<script src="jquery-3.5.1.min.js"></script>
+<body>
+    <form action="" method="post" class="a">
+        Name: <input type="text" class="text" name="name" id="name" /> <br/>
+        Address: <input type="text" class="text" name="address" id="address"> <br/>
+        E-mail: <input type="email" class="email" name="email" id="email" /> <br/>
+        <input type="button" id="submit" value="Submit" name="submit" />
+    </form>
+
+    <script>
+        
+        $(document).ready(function() {
+            $('#submit').on('click', function() {
+                valid = true;
+                if ($('#name').val() == '') {
+                    alert ("please enter your name.");
+                    valid == false;
+                }
+
+                if ($('#address').val() == '') {
+                    alert ("please enter your assress.");
+                    valid == false;
+                }
+
+                if ($('#email').val() == '') {
+                    alert ("please enter your E-mail.");
+                    valid == false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
