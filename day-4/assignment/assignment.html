@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<script src="jquery-3.5.1.min.js"></script>
+
+<body>
+    
+<button>Click Me</button>
+    <script>
+        
+        $(document).ready(function() {
+            $("button").click(function() {
+                $.ajax({
+                    url:'https://www.flickr.com/services/api/flickr.urls.getGroup.html',
+                    type: 'GET',
+                    dataType: 'jsonp',
+                    timeout: 2500,
+                    success: function(result) {
+                        console.log('complete with success and data: ', result);
+                    },
+                    error: function(result) {
+                        console.log('complete with error');
+                        alert('')
+                    },
+                    complete: function() {
+                        console.log('complete');
+                    }
+                });
+            });
+        });        
+    </script>
+
+</body>
+</html>

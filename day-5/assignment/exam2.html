@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .my-accrdion {
+            background-color: #fafafa;
+        }
+
+        .accrdion-header {
+            background-color: #222;
+            border-bottom: 1px solid #fafafa;
+            color: #fff;
+            cursor: pointer;
+            padding: .5rem 1rem;
+            font-size: 1.5rem;
+        }
+
+        .accrdion-content {
+            padding: .5rem 1rem;
+        }
+    </style>
+</head>
+
+<script src="jquery-3.5.1.min.js"></script>
+<script src="exam2/accrdion.js"></script>
+
+<body>
+    <div class="my-accordion">
+        <article class="accrdion-entry">
+          <header class="accrdion-header">
+            <a href="https://www.jqueryscript.net/accordion/">Accordion</a> Header 1
+          </header>
+          <div class="accrdion-content">
+            <p>Accordion Content 1</p>
+            </div>
+        </article>
+        <article class="accrdion-entry">
+          <header class="accrdion-header">
+            Accordion Header 2
+          </header>
+          <div class="accrdion-content">
+            <p>Accordion Content 2</p>
+            </div>
+        </article>
+        <article class="accrdion-entry">
+          <header class="accrdion-header">
+            Accordion Header 3
+          </header>
+          <div class="accrdion-content">
+            <p>Accordion Content 3</p>
+            </div>
+        </article>
+      </div>
+<script>
+    $(document).ready(function() {
+        $(function(){
+            $('.my-accordion').accrdion();
+        });     
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+        <style>
+            .google {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 35%;
+                margin-top: 10%;
+            }
+
+            .ui-widget {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+
+    <body>
+
+        <img src="img/google.png" class="google" />
+        <div class="ui-widget">
+            <label for="search">Search country here: </label>
+            <input id="search">
+        </div>
+
+        <script>
+            $( function() {
+              var availableTags = [
+                "Argentina",
+                "Australia",
+                "Austria",
+                "Belgium",
+                "Brazil",
+                "Brunei",
+                "Cambodia",
+                "China",
+                "Croatia",
+                "Egypt",
+                "France",
+                "Germany",
+                "Hungary",
+                "India",
+                "Japan",
+                "Laos",
+                "Malaysia",
+                "Philippines",
+                "Russia",
+                "Thailand",
+                "United Kingdom",
+                "United States of America"
+              ];
+              $( "#search" ).autocomplete({
+                source: availableTags
+              });
+            } );
+            </script>
+    </body>
+</html>
